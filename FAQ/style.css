@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  padding-top: 30px;
+}
+
+h3 {
+  margin: 15px;
+}
+
+.faq-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.active {
+  display: flex;
+  position: relative;
+  width: 45%;
+  flex-direction: column;
+  border: 1px solid #9fa4a8;
+  margin: 10px;
+  padding: 10px 35px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* unicode with font awesome */
+.active::before,
+.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.2;
+  top: 15px;
+  left: 20px;
+}
+
+.active::before {
+  color: #3498db;
+  top: -25px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.active .faq-text {
+  display: flex;
+  position: relative;
+  left: 10px;
+  background-color: #fff;
+}
+
+.active .faq-toggle .fa-times {
+  visibility: visible;
+}
+
+.active .fa-chevron-down {
+  visibility: hidden;
+}
+
+.faq {
+  position: relative;
+  width: 45%;
+  min-height: auto;
+  flex-direction: column;
+  border: 1px solid #9fa4a8;
+  margin: 10px 0;
+  padding: 10px 35px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-toggle {
+  position: absolute;
+  top: 35px;
+  left: 90%;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-chevron-down {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+.faq-toggle .fa-times {
+  visibility: hidden;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  outline: 5px solid #9fa4a8;
+  border-radius: 50%;
+  transform: scale(1.1);
+  color: #fff;
+  background-color: #9fa4a8;
+}
+
+.faq-text {
+  display: none;
+}
+
+/* drugo resenje */
